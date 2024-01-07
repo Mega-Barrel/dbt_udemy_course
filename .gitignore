@@ -3,3 +3,6 @@ creds.json
 
 # package folder
 course-env
+
+# package-lock file
+package-lock.yml
