@@ -30,4 +30,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_bigquery_course:
     # Config indicated by + and applies to all files
-    
+    +materialized: table
