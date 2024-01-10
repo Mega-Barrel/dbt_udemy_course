@@ -32,8 +32,7 @@ SELECT
     traffic_source,
     uri AS web_link,
     event_type,
-    {# Look in macros/macro_get_brand_name.sql to see how this function is defined #}
-    {{ target.schema }}.get_brand_name(uri) AS brand_name
+    REGEXP_EXTRACT(uri, r'.+/brand/(.+)') AS brand_name
 FROM 
     source
 {# Only runs this filter on an incremental run #}
